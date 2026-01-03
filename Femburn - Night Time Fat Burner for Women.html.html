@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Femburn - Night Time Fat Burner for Women</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        @import url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Bold.ttf');
+        @import url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Medium.ttf');
+        @import url('https://assets-persist.lovart.ai/agent-static-assets/NotoSansHans-Regular.otf');
+        @import url('https://assets-persist.lovart.ai/agent-static-assets/LongCang-Regular.ttf');
+
+        :root {
+            --primary: #FF1493;
+            --primary-dark: #D1006B;
+            --black: #000000;
+            --dark-grey: #1A1A1A;
+            --light-grey: #F5F5F5;
+            --white: #FFFFFF;
+            --font-heading: 'MiSans-Bold', sans-serif;
+            --font-body: 'NotoSansHans-Regular', sans-serif;
+            --font-script: 'LongCang-Regular', cursive;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 1920px;
+            font-family: var(--font-body);
+            color: var(--black);
+            background-color: var(--white);
+            overflow-x: hidden;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: bold;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        .container {
+            width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Utility */
+        .text-primary { color: var(--primary); }
+        .bg-black { background-color: var(--black); color: var(--white); }
+        .bg-light { background-color: var(--light-grey); }
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--primary);
+            color: var(--white);
+            font-family: var(--font-heading);
+            font-size: 18px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 20px rgba(255, 20, 147, 0.4);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(255, 20, 147, 0.6);
+            background: var(--primary-dark);
+        }
+
+        /* Header */
+        header {
+            background: rgba(0,0,0,0.95);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--primary);
+        }
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: var(--font-script);
+            font-size: 42px;
+            color: var(--white);
+        }
+        .logo span { color: var(--primary); }
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+        .nav-links a {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nav-links a:hover { color: var(--primary); }
+        .header-icons {
+            display: flex;
+            gap: 25px;
+            color: var(--primary);
+            font-size: 24px;
+        }
+
+        /* Hero */
+        .hero {
+            height: 900px;
+            background: #000;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-left {
+            width: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at center, #57002e 0%, #000 70%);
+        }
+        .hero-left::before {
+            content: '';
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: var(--primary);
+            filter: blur(180px);
+            opacity: 0.3;
+            border-radius: 50%;
+        }
+        .hero-img {
+            z-index: 2;
+            height: 85%;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 60px rgba(255,20,147,0.3));
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .hero-right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 120px 0 60px;
+            color: var(--white);
+            background: linear-gradient(135deg, #000 0%, #1a0510 100%);
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 80px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #ff69b4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero h2 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 40px;
+            font-weight: normal;
+            font-family: var(--font-body);
+            letter-spacing: 1px;
+        }
+        .hero-icons {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        .hero-icon-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .hero-icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(255,20,147,0.1);
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 36px;
+            box-shadow: 0 0 20px rgba(255,20,147,0.3);
+            transition: 0.3s;
+        }
+        .hero-icon-box:hover .hero-icon-circle {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 0 40px rgba(255,20,147,0.6);
+        }
+        .hero-icon-text {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .trust-indicators {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            font-size: 14px;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+        .trust-item i { color: var(--primary); margin-right: 8px; font-size: 18px; vertical-align: middle; }
+
+        /* Key Benefits */
+        .benefits {
+            padding: 120px 0;
+            background: var(--black);
+            text-align: center;
+        }
+        .section-title {
+            font-size: 56px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        .section-title span { color: var(--primary); }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 80px;
+        }
+        .benefit-card {
+            background: var(--dark-grey);
+            padding: 60px 40px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 5px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+        .benefit-card:hover::before {
+            transform: scaleX(1);
+        }
+        .benefit-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-10px);
+            background: #111;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        .benefit-icon {
+            font-size: 60px;
+            color: var(--primary);
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+        .benefit-card h3 {
+            color: var(--white);
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .benefit-card p {
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        /* Product Showcase */
+        .showcase {
+            padding: 140px 0;
+            background: var(--white);
+        }
+        .showcase-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+        }
+        .showcase-img {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            background: radial-gradient(circle, #ffe6f2 0%, #fff 70%);
+            border-radius: 40px;
+            padding: 60px;
+        }
+        .showcase-info {
+            width: 50%;
+        }
+        .product-title {
+            font-size: 64px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            color: var(--black);
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            color: #666;
+            font-weight: 600;
+        }
+        .stars { color: var(--primary); font-size: 20px; }
+        .price {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .price span {
+            font-size: 16px;
+            color: var(--white);
+            background: var(--black);
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .pack-options {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .pack-option {
+            border: 2px solid #ddd;
+            padding: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            text-align: center;
+            flex: 1;
+            transition: 0.3s;
+        }
+        .pack-option:hover { border-color: var(--primary); }
+        .pack-option.active {
+            border-color: var(--primary);
+            background: rgba(255,20,147,0.05);
+            box-shadow: 0 5px 15px rgba(255,20,147,0.1);
+        }
+        .pack-title { font-weight: bold; display: block; margin-bottom: 8px; font-size: 20px; }
+        .pack-price { color: #666; font-size: 14px; }
+        .badges {
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+        }
+        .badge-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .badge-icon {
+            width: 60px;
+            height: 60px;
+            background: #f8f8f8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--black);
+            font-size: 28px;
+            transition: 0.3s;
+        }
+        .badge-item:hover .badge-icon {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 120px 0;
+            background: #F8F8F8;
+            text-align: center;
+        }
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 45px;
+            left: 100px;
+            right: 100px;
+            height: 4px;
+            background: #e0e0e0;
+            z-index: 0;
+        }
+        .step {
+            position: relative;
+            z-index: 1;
+            width: 22%;
+            background: #F8F8F8;
+            padding: 0 10px;
+        }
+        .step-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--black);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 0 auto 30px;
+            border: 6px solid #F8F8F8;
+            box-shadow: 0 0 0 2px var(--primary);
+            transition: 0.3s;
+        }
+        .step:hover .step-icon {
+            transform: scale(1.1);
+            background: var(--primary);
+            color: white;
+        }
+        .step-num {
+            position: absolute;
+            top: -10px;
+            right: calc(50% - 45px);
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .step h3 { font-size: 24px; margin-bottom: 15px; }
+        .step p { color: #666; line-height: 1.6; font-size: 16px; }
+
+        /* Ingredients */
+        .ingredients {
+            padding: 120px 0;
+            background: var(--white);
+            border-top: 10px solid var(--primary);
+        }
+        .ingredient-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 25px;
+            margin-top: 80px;
+        }
+        .ingredient-card {
+            text-align: center;
+            padding: 20px 10px;
+        }
+        .ing-img-circle {
+            width: 150px;
+            height: 150px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            overflow: hidden;
+            position: relative;
+            border: 3px solid transparent;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ingredient-card:hover .ing-img-circle {
+            border-color: var(--primary);
+            transform: rotate(10deg);
+        }
+        .ing-icon {
+            font-size: 64px;
+            color: #333;
+        }
+        .ing-title { font-weight: bold; font-size: 20px; margin-bottom: 12px; }
+        .ing-desc { font-size: 15px; color: #666; line-height: 1.5; }
+        
+        /* Science */
+        .science {
+            background: var(--black);
+            padding: 140px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .science::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: linear-gradient(135deg, rgba(255,20,147,0.15) 0%, rgba(0,0,0,0.95) 70%);
+            pointer-events: none;
+        }
+        .science-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        .science-left { width: 50%; color: var(--white); }
+        .stat-box {
+            margin-bottom: 50px;
+            border-left: 5px solid var(--primary);
+            padding-left: 30px;
+            transition: 0.3s;
+        }
+        .stat-box:hover { padding-left: 40px; }
+        .stat-num {
+            font-size: 72px;
+            color: var(--primary);
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+            text-shadow: 0 0 30px rgba(255,20,147,0.3);
+        }
+        .stat-desc { font-size: 20px; opacity: 0.9; line-height: 1.5; }
+        .science-right {
+            width: 40%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .science-right img {
+            width: 80%;
+            filter: drop-shadow(0 0 80px rgba(255,20,147,0.5));
+            animation: pulse-glow 3s infinite alternate;
+        }
+        @keyframes pulse-glow {
+            from { filter: drop-shadow(0 0 40px rgba(255,20,147,0.4)); }
+            to { filter: drop-shadow(0 0 80px rgba(255,20,147,0.7)); }
+        }
+
+        /* Reviews */
+        .reviews {
+            padding: 120px 0;
+            background: #F5F5F5;
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+        .review-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .review-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .verified {
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255,20,147,0.1);
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        .review-title { font-weight: bold; font-size: 18px; margin-bottom: 15px; display: block; }
+        .review-text { color: #555; line-height: 1.6; margin-bottom: 25px; }
+        .reviewer { font-weight: bold; font-size: 14px; border-top: 1px solid #eee; padding-top: 15px; }
+
+        /* Blog */
+        .blog {
+            padding: 120px 0;
+            background: var(--white);
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+        .blog-card {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .blog-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.12); }
+        .blog-img {
+            height: 260px;
+            background: #333;
+            position: relative;
+            overflow: hidden;
+        }
+        .blog-img-content {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: 0.5s;
+        }
+        .blog-card:hover .blog-img-content { transform: scale(1.05); }
+        .blog-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .blog-info { padding: 35px; }
+        .blog-title { font-size: 22px; margin-bottom: 15px; line-height: 1.4; }
+        .blog-meta { font-size: 14px; color: #888; margin-bottom: 25px; }
+        .read-more { color: var(--primary); font-weight: bold; display: inline-flex; align-items: center; gap: 5px; transition: 0.3s; }
+        .read-more:hover { gap: 10px; }
+
+        /* FAQ */
+        .faq {
+            padding: 120px 0;
+            background: #F9F9F9;
+        }
+        .faq-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 60px;
+        }
+        .faq-item {
+            background: var(--white);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            transition: 0.3s;
+        }
+        .faq-item:hover { transform: translateX(5px); }
+        .faq-q {
+            padding: 25px 30px;
+            font-weight: bold;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        .faq-q i { color: var(--primary); font-size: 24px; }
+        .faq-a {
+            padding: 0 30px 25px;
+            color: #666;
+            line-height: 1.6;
+            display: none; /* Just for layout static representation */
+        }
+        /* Contact */
+        .contact {
+            padding: 100px 0;
+            background: var(--black);
+            color: var(--white);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            margin-top: 60px;
+        }
+        .contact-form input, .contact-form textarea, .contact-form select {
+            width: 100%;
+            background: #111;
+            border: 1px solid #333;
+            padding: 20px;
+            color: white;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 16px;
+        }
+        .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+            border-color: var(--primary);
+            outline: none;
+            background: #1a1a1a;
+        }
+        .contact-info-item {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .c-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,20,147,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 28px;
+            border: 1px solid var(--primary);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            padding: 100px 0;
+            background: linear-gradient(90deg, #FF1493, #a40b5d);
+            color: var(--white);
+            text-align: center;
+        }
+        .newsletter h2 { font-size: 42px; margin-bottom: 15px; }
+        .newsletter p { margin-bottom: 40px; font-size: 20px; opacity: 0.9; }
+        .nl-form {
+            display: inline-flex;
+            gap: 15px;
+            max-width: 700px;
+            width: 100%;
+        }
+        .nl-input {
+            flex: 1;
+            padding: 20px 30px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+        }
+        .nl-btn {
+            background: var(--black);
+            color: var(--white);
+            padding: 20px 50px;
+            border-radius: 50px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .nl-btn:hover { background: #222; transform: translateY(-3px); }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #999;
+            padding: 100px 0 40px;
+            border-top: 1px solid #222;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+        .footer-logo {
+            font-family: var(--font-script);
+            font-size: 42px;
+            color: var(--white);
+            margin-bottom: 25px;
+            display: block;
+        }
+        .footer-logo span { color: var(--primary); }
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 18px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .footer-links li { margin-bottom: 18px; }
+        .footer-links a { font-size: 15px; transition: 0.3s; }
+        .footer-links a:hover { color: var(--primary); padding-left: 5px; }
+        .footer-bottom {
+            border-top: 1px solid #222;
+            padding-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .payment-icons { font-size: 28px; display: flex; gap: 20px; color: white; opacity: 0.7; }
+
+        /* Animation Classes */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 20, 147, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 20, 147, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 20, 147, 0); }
+        }
+        .pulse-btn {
+            animation: pulse 2s infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo" data-cursor-element-id="cursor-el-1"><img src="images/20251223-10372222.png" alt="Femburn" style="width: 170px; height: 58px;"></a>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Science</a>
+                <a href="#">Blog</a>
+                <a href="#">Reviews</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="header-icons">
+                <a href="#"><i class="ri-search-line"></i></a>
+                <a href="#"><i class="ri-user-line"></i></a>
+                <a href="#"><i class="ri-shopping-cart-2-line"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-left">
+            <img src="images/jimeng-2025-12-23.png" alt="Femburn Bottle" class="hero-img" data-cursor-element-id="cursor-el-21">
+        </div>
+        <div class="hero-right">
+            <h1>Transform While You Sleep</h1>
+            <h2>Night Time Fat Burner for Women</h2>
+            <div class="hero-icons">
+                <div class="hero-icon-box">
+                    <div class="hero-icon-circle"><i class="ri-zzz-fill"></i></div>
+                    <span class="hero-icon-text">Sleep</span>
+                </div>
+                <div class="hero-icon-box">
+                    <div class="hero-icon-circle"><i class="ri-fire-fill"></i></div>
+                    <span class="hero-icon-text">Burn</span>
+                </div>
+                <div class="hero-icon-box">
+                    <div class="hero-icon-circle"><i class="ri-women-fill"></i></div>
+                    <span class="hero-icon-text">Tone</span>
+                </div>
+            </div>
+            <div>
+                <a href="#" class="btn pulse-btn">Shop Now</a>
+            </div>
+            <div class="trust-indicators">
+                <div class="trust-item"><i class="ri-check-double-line"></i> 5,000+ Happy Customers</div>
+                <div class="trust-item"><i class="ri-shield-check-line"></i> 30-Day Guarantee</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Triple-Action <span>Night Formula</span></h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="ri-moon-clear-line benefit-icon"></i>
+                    <h3>Support Restful Sleep</h3>
+                    <p>Calm your mind and drift into deep, restorative sleep essential for recovery and metabolic health.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="ri-fire-line benefit-icon"></i>
+                    <h3>Burn Fat Overnight</h3>
+                    <p>Boost your metabolism while you rest, turning your body into a 24/7 fat-burning machine safely.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="ri-body-scan-line benefit-icon"></i>
+                    <h3>Wake Up Toned</h3>
+                    <p>Promote lean muscle preservation and definition, helping you achieve that sculpted look faster.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <div class="container showcase-wrapper">
+            <div class="showcase-img">
+                <img src="images/jimeng-2025-12-23-222.png" alt="Product Detail" data-cursor-element-id="cursor-el-1">
+            </div>
+            <div class="showcase-info">
+                <h2 class="product-title">Femburn Night<br>Fat Burner</h2>
+                <div class="rating">
+                    <div class="stars">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                    <span>(2,847 Reviews)</span>
+                </div>
+                <div class="price">$49.95 <span>Save $20</span></div>
+                
+                <div class="pack-options">
+                    <div class="pack-option">
+                        <span class="pack-title">1 Bottle</span>
+                        <span class="pack-price">30 Day Supply</span>
+                    </div>
+                    <div class="pack-option active">
+                        <span class="pack-title">2 Bottles</span>
+                        <span class="pack-price">60 Day Supply</span>
+                    </div>
+                    <div class="pack-option">
+                        <span class="pack-title">3 Bottles</span>
+                        <span class="pack-price">90 Day Supply</span>
+                    </div>
+                </div>
+
+                <a href="#" class="btn" style="width: 100%; text-align: center; margin-bottom: 20px;">Add To Cart</a>
+                
+                <div class="badges">
+                    <div class="badge-item">
+                        <div class="badge-icon"><i class="ri-plant-line"></i></div>
+                        <span>Vegan</span>
+                    </div>
+                    <div class="badge-item">
+                        <div class="badge-icon"><i class="ri-test-tube-line"></i></div>
+                        <span>Non-GMO</span>
+                    </div>
+                    <div class="badge-item">
+                        <div class="badge-icon"><i class="ri-flag-line"></i></div>
+                        <span>USA Made</span>
+                    </div>
+                    <div class="badge-item">
+                        <div class="badge-icon"><i class="ri-小麦-no-line"></i></div>
+                        <span>Gluten Free</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title" style="color:#000;">Your Night Time <span>Transformation</span></h2>
+            <div class="timeline">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-icon"><i class="ri-capsule-line"></i></div>
+                    <h3>Take 2 Capsules</h3>
+                    <p>Take with water 30 minutes before your planned bedtime.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-icon"><i class="ri-zzz-line"></i></div>
+                    <h3>Fall Asleep</h3>
+                    <p>Natural ingredients help you relax and drift off quickly.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-icon"><i class="ri-fire-fill"></i></div>
+                    <h3>Burn & Tone</h3>
+                    <p>Metabolism activates while you rest to burn fat.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-icon"><i class="ri-sun-line"></i></div>
+                    <h3>Wake Energized</h3>
+                    <p>Wake up feeling refreshed with no grogginess.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ingredients">
+        <div class="container">
+            <h2 class="section-title" style="color:#000; text-align: center;">Powered by Nature, <br>Backed by <span>Science</span></h2>
+            <div class="ingredient-grid">
+                <div class="ingredient-card">
+                    <div class="ing-img-circle" style="background: #e8f5e9;">
+                        <i class="ri-leaf-line ing-icon" style="color: #4CAF50;"></i>
+                    </div>
+                    <div class="ing-title">Green Tea Extract</div>
+                    <div class="ing-desc">Boosts metabolism and aids in fat oxidation.</div>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ing-img-circle" style="background: #e3f2fd;">
+                        <i class="ri-drop-line ing-icon" style="color: #2196F3;"></i>
+                    </div>
+                    <div class="ing-title">L-Carnitine</div>
+                    <div class="ing-desc">Transports fatty acids to be burned for energy.</div>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ing-img-circle" style="background: #f3e5f5;">
+                        <i class="ri-moon-line ing-icon" style="color: #9C27B0;"></i>
+                    </div>
+                    <div class="ing-title">Melatonin</div>
+                    <div class="ing-desc">Regulates sleep cycle for deeper rest.</div>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ing-img-circle" style="background: #fff3e0;">
+                        <i class="ri-brain-line ing-icon" style="color: #FF9800;"></i>
+                    </div>
+                    <div class="ing-title">5-HTP</div>
+                    <div class="ing-desc">Supports mood and reduces night cravings.</div>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ing-img-circle" style="background: #ffebee;">
+                        <i class="ri-capsule-fill ing-icon" style="color: #F44336;"></i>
+                    </div>
+                    <div class="ing-title">CLA</div>
+                    <div class="ing-desc">Helps reduce body fat while preserving muscle.</div>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ing-img-circle" style="background: #fff8e1;">
+                        <i class="ri-seedling-line ing-icon" style="color: #FFC107;"></i>
+                    </div>
+                    <div class="ing-title">Garcinia Cambogia</div>
+                    <div class="ing-desc">Blocks fat production and curbs appetite.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="science">
+        <div class="container science-content">
+            <div class="science-left">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 50px;">Clinically Studied <br><span>Results</span></h2>
+                <div class="stat-box">
+                    <div class="stat-num">92%</div>
+                    <div class="stat-desc">Reported significantly better sleep quality within the first week of use.</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">87%</div>
+                    <div class="stat-desc">Noticed visible toning and reduction in bloating after 30 days.</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">4.2 lbs</div>
+                    <div class="stat-desc">Average weight loss recorded in a 30-day consumer study group.</div>
+                </div>
+                <a href="#" style="color: var(--primary); font-weight: bold; font-size: 18px; display: inline-flex; align-items: center; gap: 10px;">View Clinical Studies <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="science-right">
+                <img src="images/pinjiahe.png" alt="Glowing Bottle" data-cursor-element-id="cursor-el-1">
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title" style="color: #000; text-align: center;">What Women Are <span>Saying</span></h2>
+            <div style="text-align: center; margin-top: 10px; color: #666; font-size: 18px;">Based on 2,847 reviews</div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                        <div class="verified"><i class="ri-checkbox-circle-fill"></i> Verified Purchase</div>
+                    </div>
+                    <span class="review-title">Finally sleeping through the night!</span>
+                    <p class="review-text">"I've struggled with insomnia for years. Not only am I sleeping better, but I've lost 5 lbs in 2 weeks without changing my diet much."</p>
+                    <div class="reviewer">- Sarah J., New York</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                        <div class="verified"><i class="ri-checkbox-circle-fill"></i> Verified Purchase</div>
+                    </div>
+                    <span class="review-title">Amazing results</span>
+                    <p class="review-text">"Waking up feeling lighter and more energized. My midsection is definitely flatter. Love that it's natural!"</p>
+                    <div class="reviewer">- Emily R., California</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="stars"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                        <div class="verified"><i class="ri-checkbox-circle-fill"></i> Verified Purchase</div>
+                    </div>
+                    <span class="review-title">Part of my nightly routine</span>
+                    <p class="review-text">"The perfect addition to my fitness journey. It helps me recover from workouts and keeps my metabolism going."</p>
+                    <div class="reviewer">- Jessica M., Texas</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#" class="btn" style="background: transparent; color: var(--primary); border: 2px solid var(--primary);">Load More Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+        <div class="container">
+            <h2 class="section-title" style="color: #000; text-align: center;">From Our Wellness <span>Blog</span></h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="images/changj.png" alt="Femburn Product" style="width: 100%; height: 100%; object-fit: cover;" data-cursor-element-id="cursor-el-1">
+                        <span class="blog-badge">Weight Loss</span>
+                    </div>
+                    <div class="blog-info">
+                        <h3 class="blog-title">5 Science-Backed Ways to Boost Nighttime Fat Burning</h3>
+                        <div class="blog-meta">Oct 12, 2023 • 5 min read</div>
+                        <a href="#" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="images/chanjin2.png" alt="Femburn Product" style="width: 100%; height: 100%; object-fit: cover;" data-cursor-element-id="cursor-el-1">
+                        <span class="blog-badge">Sleep Science</span>
+                    </div>
+                    <div class="blog-info">
+                        <h3 class="blog-title">The Connection Between Sleep Quality and Metabolism</h3>
+                        <div class="blog-meta">Sep 28, 2023 • 4 min read</div>
+                        <a href="#" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="images/inge.png" alt="Natural Ingredients" style="width: 100%; height: 100%; object-fit: cover;" data-cursor-element-id="cursor-el-1">
+                        <span class="blog-badge">Ingredients</span>
+                    </div>
+                    <div class="blog-info">
+                        <h3 class="blog-title">Natural Ingredients for Women's Wellness Explained</h3>
+                        <div class="blog-meta">Sep 15, 2023 • 6 min read</div>
+                        <a href="#" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title" style="color: #000; text-align: center;">Frequently Asked <span>Questions</span></h2>
+            <div class="faq-container">
+                <div class="faq-left">
+                    <div class="faq-item">
+                        <div class="faq-q">How does Femburn work? <i class="ri-add-line"></i></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">When should I take it? <i class="ri-add-line"></i></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">Is it safe for daily use? <i class="ri-add-line"></i></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">Will it keep me awake? <i class="ri-add-line"></i></div>
+                    </div>
+                </div>
+                <div class="faq-right">
+                    <div class="faq-item">
+                        <div class="faq-q">How long until I see results? <i class="ri-add-line"></i></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">Can I take it with other supplements? <i class="ri-add-line"></i></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">What if I'm not satisfied? <i class="ri-add-line"></i></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">Is it suitable for all women? <i class="ri-add-line"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name">
+                        <input type="email" placeholder="Your Email">
+                        <select>
+                            <option>General Inquiry</option>
+                            <option>Order Support</option>
+                            <option>Wholesale</option>
+                        </select>
+                        <textarea rows="5" placeholder="Your Message"></textarea>
+                        <button type="button" class="btn" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="c-icon"><i class="ri-mail-send-line"></i></div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p style="color: #aaa;">support@femburn.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="c-icon"><i class="ri-phone-line"></i></div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p style="color: #aaa;">1-800-FEMBURN</p>
+                            <span style="color: var(--primary); font-size: 14px; display: block; margin-top: 5px;">Mon-Fri 9am-5pm EST</span>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="c-icon"><i class="ri-map-pin-line"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p style="color: #aaa;">123 Wellness Blvd, Miami, FL 33101</p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 50px;">
+                        <div style="color: white; margin-bottom: 20px; font-weight: bold; font-size: 18px;">Follow Us</div>
+                        <div style="display: flex; gap: 25px;">
+                            <a href="#" style="color: white; font-size: 28px;"><i class="ri-instagram-line"></i></a>
+                            <a href="#" style="color: white; font-size: 28px;"><i class="ri-facebook-circle-fill"></i></a>
+                            <a href="#" style="color: white; font-size: 28px;"><i class="ri-twitter-x-line"></i></a>
+                            <a href="#" style="color: white; font-size: 28px;"><i class="ri-tiktok-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Join the Femburn Community</h2>
+            <p>Get exclusive tips, offers, and wellness content delivered to your inbox.</p>
+            <div class="nl-form">
+                <input type="email" class="nl-input" placeholder="Enter your email address">
+                <button class="nl-btn">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">Fem<span>burn</span></a>
+                    <p style="line-height: 1.6; color: #888;">Empowering women to achieve their fitness goals through science-backed, natural nutrition. Sleep better, burn fat, live confident.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Bundles</a></li>
+                        <li><a href="#">Subscribe & Save</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2023 Femburn Inc. All rights reserved.</div>
+                <div class="payment-icons">
+                    <i class="ri-visa-line"></i>
+                    <i class="ri-mastercard-line"></i>
+                    <i class="ri-paypal-line"></i>
+                    <i class="ri-secure-payment-line"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
